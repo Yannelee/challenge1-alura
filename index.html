@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Amigo Secreto</title>
+</head>
+
+<body>
+    <div class="container in-middle">
+        <div class="container__contenido">
+            <div class="container__informaciones">
+                <div class="container__nombres">
+                    <h1 id="amigoElegido" hidden></h1>
+                    <h1 id="titulo">Amigo Secreto</h1>
+                </div>
+                <input type="text" id="nombreAmigo" class="container__input">
+                <p class="texto__listaAmigos"></p>
+                <div class="container__botones">
+                    <button onclick="añadirAmigo()" id="añadirNombre" class="container__boton">Añadir Amigo</button>
+                    <button onclick="sortear()" class="container__boton" id="sortear" disabled>Sortear</button>
+                    <button onclick="reiniciarJuego()" class="container__boton" id="reiniciar" hidden>Reiniciar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js" defer></script>
+</body>
+
+</html>
+
+<style>
+  .in-middle{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px grey;
+    font-family: Verdana, Helvetica, sans-serif
+  }
+  
+  .texto__listaAmigos{
+    color: black;
+  }
+
+  body {
+    background: url('./imgs/image.png') no-repeat fixed center;
+    background-size: cover;
+  }
+
+  button {
+    margin: 1rem;
+  }
+  
+  @media (min-width: 400px) {
+    body {
+      background: url('./imgs/image.png') no-repeat fixed center;
+      background-size: cover;
+    }
+  }
+  </style>
